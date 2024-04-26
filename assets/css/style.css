@@ -422,23 +422,22 @@ h3{
 }
 @keyframes fadeIn {
   from {
-    opacity: 0;
+    
     transform: translateY(-50px);
   }
   to {
-    opacity: 2;
+    
     transform: translateY(0);
   }
 }
 
-/* Appliquez l'animation à la partie "REALISATION" */
 .project-grid {
   display: flex;
   width: 100%;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  animation: fadeIn 1s ease-out; /* Ajoutez cette ligne pour appliquer l'animation */
+  animation: fadeIn 1s ease-out; 
 }
 
 .project-card {
@@ -474,13 +473,18 @@ h3{
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    height: 100%;
+    height: 50%;
 	
 	transition: transform 0.3s;
 }
 .image-wrapper img {
     width: 100%;
     height: auto;
+}
+
+.image-wrapper h4{
+	margin-bottom: -50px;
+	position: relative;
 }
 
 

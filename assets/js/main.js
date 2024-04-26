@@ -1,13 +1,24 @@
 /* ----- NAVIGATION BAR FUNCTION ----- */
-function myMenuFunction() {
-  var menuBtn = document.getElementById("myNavMenu");
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.querySelector(".nav-menu-btn");
+  const navMenu = document.querySelector(".nav-menu");
 
-  if (menuBtn.className === "nav-menu") {
-    menuBtn.className += " responsive";
-  } else {
-    menuBtn.className = "nav-menu";
+  function toggleMenu() {
+    navMenu.classList.toggle("responsive");
   }
-}
+
+  menuBtn.addEventListener("click", toggleMenu);
+
+  const navLinks = document.querySelectorAll(".nav-link");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      if (navMenu.classList.contains("responsive")) {
+        toggleMenu();
+      }
+    });
+  });
+});
+
 
 /* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
 window.onscroll = function () {
